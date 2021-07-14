@@ -15,6 +15,7 @@ function makePromiseCall(methodType, url, async = true, data = null) {
         console.log("Handle 400 Client Error or 500 Server Error");
       }
     }
+  
     xhr.open(methodType, url, async);
     if (data) {
       xhr.setRequestHeader("Content-Type", "application/json");
@@ -45,3 +46,5 @@ makePromiseCall("POST", postURL, true, employeeData)
     console.log("User Added: " + responseText);
   })
   .catch(error => console.log("POST Error Status: " + JSON.stringify(error)));
+
+  
